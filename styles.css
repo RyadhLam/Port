@@ -1,0 +1,758 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #1a1a1c;
+    color: #ffffff;
+}
+
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.98);
+    padding: 12px 25px;
+    border-radius: 50px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
+
+.navbar.scroll-down {
+    transform: translate(-50%, 100px);
+}
+
+.navbar.scroll-up {
+    transform: translate(-50%, 0);
+}
+
+.nav-container {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #1d1d1f;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 400;
+    font-size: 0.9em;
+}
+
+.nav-item:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+}
+
+.nav-item i {
+    font-size: 1.2em;
+}
+
+.nav-item span {
+    font-size: 0.9em;
+}
+
+.nav-item.active {
+    background-color: rgba(0, 0, 0, 0.05);
+    font-weight: 500;
+}
+
+/* Section Accueil */
+.home-section {
+    padding-top: 100px;
+    padding: 120px 20px 120px;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+/* Conteneur Profile */
+.profile-container {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.profile-image {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    border: 3px solid white;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Poste Actuel */
+.current-position {
+    background: rgba(255, 255, 255, 0.98);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.18);
+    margin-top: 80px;
+    margin-bottom: 80px;
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.position-content {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.position-content i {
+    font-size: 1.6em;
+    color: #1d1d1f;
+}
+
+/* Timeline Parcours */
+.career-path {
+    background: rgba(255, 255, 255, 0.98);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.18);
+    margin-top: 80px;
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.timeline {
+    position: relative;
+    margin-top: 30px;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -30px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #1d1d1f;
+    border: 1px solid white;
+}
+
+.timeline-content {
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles généraux */
+h1 {
+    font-size: 2.5em;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+h3 {
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+h4 {
+    font-size: 1em;
+    font-weight: 400;
+    color: #f5f5f7;
+}
+
+p {
+    color: #424245;
+    font-weight: 400;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.position-description {
+    max-width: 600px;
+}
+
+/* Quick Intro Section */
+.quick-intro {
+    background: rgba(255, 255, 255, 0.98);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.18);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    margin-top: 20px;
+    width: 100%;
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quick-intro h2 {
+    margin-bottom: 20px;
+    font-size: 1.6em;
+}
+
+.intro-text {
+    font-size: 1em;
+    line-height: 1.8;
+    color: #333;
+    margin: 0 auto;
+    max-width: 600px;
+    letter-spacing: 0.2px;
+    padding: 0 10px;
+}
+
+.quick-intro:hover, .current-position:hover, .career-path:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* Section Contact */
+.contact-section {
+    padding: 120px 20px 120px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.social-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #1d1d1f;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.18);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    min-width: 120px;
+}
+
+.social-link i {
+    font-size: 1.8em;
+    transition: transform 0.3s ease;
+    color: #1d1d1f;
+}
+
+.social-link span {
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.social-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.social-link:hover i {
+    transform: scale(1.1);
+}
+
+/* Styles spécifiques pour chaque icône */
+.social-link:nth-child(1) i {
+    color: #ea4335; /* Couleur Gmail */
+}
+
+.social-link:nth-child(2) i {
+    color: #0077b5; /* Couleur LinkedIn */
+}
+
+.social-link:nth-child(3) i {
+    color: #333; /* Couleur GitHub */
+}
+
+/* Section Projets */
+.projects-section {
+    padding: 120px 20px 120px;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.18);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-image-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    position: relative;
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-overlay span {
+    color: white;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.project-image-link:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-image-link:hover img {
+    transform: scale(1.05);
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-description {
+    margin-top: 10px;
+    color: #424245;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Ajuster le scroll-padding */
+html {
+    scroll-padding-top: 100px;
+    scroll-behavior: smooth;
+}
+
+/* Styles pour le bouton dark mode */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle i {
+    font-size: 1.2em;
+    color: #1d1d1f;
+    transition: transform 0.5s ease;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles pour le mode clair */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #1d1d1f;
+    --element-bg: rgba(235, 235, 240, 0.98); /* Encore plus gris */
+    --element-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+    --element-border: 1px solid rgba(0, 0, 0, 0.1);
+    --text-primary: #1d1d1f;
+    --text-secondary: #424245;
+    --hover-bg: rgba(225, 225, 230, 0.98); /* Légèrement plus foncé au hover */
+}
+
+/* Styles pour le mode sombre */
+:root[data-theme="dark"] {
+    --bg-color: #1a1a1c;
+    --text-color: #ffffff;
+    --element-bg: rgba(255, 255, 255, 0.98);
+    --element-shadow: 0 15px 45px rgba(0, 0, 0, 0.18);
+    --element-border: 1px solid rgba(0, 0, 0, 0.05);
+    --text-primary: #ffffff;
+    --text-secondary: #f5f5f7;
+    --hover-bg: rgba(250, 250, 255, 0.98);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Animation pour l'icône */
+:root[data-theme="dark"] .theme-toggle i {
+    transform: rotate(360deg);
+}
+
+/* Appliquer les variables aux éléments */
+.navbar,
+.quick-intro,
+.current-position,
+.career-path,
+.project-card,
+.social-link,
+.theme-toggle {
+    background: var(--element-bg);
+    box-shadow: var(--element-shadow);
+    border: var(--element-border);
+}
+
+/* Ajuster les effets hover */
+.quick-intro:hover,
+.current-position:hover,
+.career-path:hover,
+.project-card:hover,
+.social-link:hover,
+.theme-toggle:hover {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+/* Timeline content en mode clair */
+.timeline-content {
+    background: var(--element-bg);
+}
+
+/* Ajuster la couleur du texte dans les conteneurs */
+:root[data-theme="light"] .quick-intro p,
+:root[data-theme="light"] .current-position p,
+:root[data-theme="light"] .career-path p,
+:root[data-theme="light"] .project-description,
+:root[data-theme="light"] .timeline-content p {
+    color: #424245;
+}
+
+/* Ajuster les effets hover */
+:root[data-theme="light"] .nav-item:hover,
+:root[data-theme="light"] .nav-item.active {
+    background-color: var(--hover-bg);
+}
+
+/* Renforcer les ombres en mode clair */
+:root[data-theme="light"] .navbar,
+:root[data-theme="light"] .quick-intro,
+:root[data-theme="light"] .current-position,
+:root[data-theme="light"] .career-path,
+:root[data-theme="light"] .project-card,
+:root[data-theme="light"] .social-link,
+:root[data-theme="light"] .theme-toggle {
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+:root[data-theme="light"] .quick-intro:hover,
+:root[data-theme="light"] .current-position:hover,
+:root[data-theme="light"] .career-path:hover,
+:root[data-theme="light"] .project-card:hover,
+:root[data-theme="light"] .social-link:hover,
+:root[data-theme="light"] .theme-toggle:hover {
+    background: var(--hover-bg);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* Ajuster les couleurs de texte en mode clair */
+:root[data-theme="light"] h1,
+:root[data-theme="light"] h2,
+:root[data-theme="light"] h3 {
+    color: var(--text-primary);
+}
+
+:root[data-theme="light"] p,
+:root[data-theme="light"] .timeline-content p {
+    color: var(--text-secondary);
+}
+
+/* Renforcer la timeline en mode clair */
+:root[data-theme="light"] .timeline::before {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+:root[data-theme="light"] .timeline-dot {
+    background: var(--text-primary);
+    border: 2px solid var(--bg-color);
+}
+
+/* Ajuster le style du bouton CV */
+.cv-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px; /* Augmenté pour plus d'espace avec le conteneur au-dessus */
+    padding: 12px 24px;
+    background: var(--element-bg); /* Changé pour utiliser le fond des éléments */
+    border: var(--element-border);
+    border-radius: 25px;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: var(--element-shadow);
+}
+
+.cv-button i {
+    font-size: 1.1em;
+}
+
+.cv-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    background: var(--hover-bg);
+}
+
+/* Ajuster la couleur du titre dans la timeline */
+.timeline-content h4 {
+    color: var(--text-primary);
+    font-weight: 500; /* Un peu plus gras pour une meilleure lisibilité */
+}
+
+/* Spécifiquement pour le mode sombre */
+:root[data-theme="dark"] .timeline-content h4 {
+    color: #ffffff;
+}
+
+/* Spécifiquement pour le mode clair */
+:root[data-theme="light"] .timeline-content h4 {
+    color: #1d1d1f;
+}
+
+/* Ajuster le style des points dans la description du poste */
+.timeline-content p {
+    padding-left: 20px; /* Espace pour les points */
+    text-align: left;
+}
+
+.timeline-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-content p {
+    position: relative;
+    padding-left: 1.5em; /* Espace pour le point */
+    margin-bottom: 8px; /* Espace entre les lignes */
+}
+
+.timeline-content p::before {
+    content: "●";
+    position: absolute;
+    left: 0;
+    color: var(--text-primary);
+}
+
+/* Style pour le nom de l'entreprise */
+.company-name {
+    font-size: 0.9em;
+    color: #666;
+    margin: 5px 0 12px 0;
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Ajuster pour le mode sombre */
+:root[data-theme="dark"] .company-name {
+    color: #aaa;
+}
+
+/* Style pour la section formation */
+.education-path {
+    background: var(--element-bg);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: var(--element-shadow);
+    border: var(--element-border);
+    margin-top: 80px;
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.education-path:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* Ajuster le style du bouton CV pour le mode sombre */
+:root[data-theme="dark"] .cv-button {
+    background: #1d1d1f;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+:root[data-theme="dark"] .cv-button:hover {
+    background: #2d2d2f;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+:root[data-theme="dark"] .cv-button i {
+    color: #ffffff;
+}
+
+/* Ajuster pour le mode sombre */
+:root[data-theme="dark"] .intro-text {
+    color: #e0e0e0;
+}
+
+/* Ajuster pour le mode clair */
+:root[data-theme="light"] .intro-text {
+    color: #424245;
+}
+
+/* Ajuster la couleur du texte pour le mode sombre */
+:root[data-theme="dark"] .timeline-content p {
+    color: #e0e0e0;
+}
+
+:root[data-theme="dark"] .timeline-content {
+    background: #1d1d1f;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+:root[data-theme="dark"] .timeline-content h3 {
+    color: #ffffff;
+}
+
+:root[data-theme="dark"] .timeline-content h4 {
+    color: #ffffff;
+}
+
+:root[data-theme="dark"] .company-name {
+    color: #aaa;
+}
+
+:root[data-theme="dark"] .timeline-content p::before {
+    color: #ffffff;
+}
+
+/* Ajuster l'opacité du fond pour plus de contraste */
+:root[data-theme="dark"] .timeline-content {
+    background: rgba(29, 29, 31, 0.95);
+}
+
+/* Ajuster les styles pour le mode sombre dans la section À propos */
+:root[data-theme="dark"] .quick-intro {
+    background: #1d1d1f;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+:root[data-theme="dark"] .quick-intro h2 {
+    color: #ffffff;
+}
+
+:root[data-theme="dark"] .quick-intro p {
+    color: #e0e0e0;
+}
+
+:root[data-theme="dark"] .quick-intro:hover {
+    background: #2d2d2f;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* Supprimer les styles redondants */
+:root[data-theme="dark"] .intro-text {
+    color: #e0e0e0;
+} 

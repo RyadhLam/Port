@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <button class="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Accueil</span>
+            </a>
+            <a href="#career" class="nav-item">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Parcours</span>
+            </a>
+            <a href="#projects" class="nav-item">
+                <i class="fas fa-project-diagram"></i>
+                <span>Projets</span>
+            </a>
+            <a href="#contact" class="nav-item">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </nav>
+
+    <section id="home" class="home-section">
+        <div class="profile-container">
+            <div class="profile-image">
+                <img src="./assets/1719905876076.jpg" alt="Photo de profil">
+            </div>
+            <h1>Ryadh LAM</h1>
+            <div class="quick-intro">
+                <h2>À propos de moi</h2>
+                <p class="intro-text">
+                    Passionné par le développement web, j'aime créer des applications intuitives et efficaces. Mon expérience va de la conception d'outils sécurisés pour l'armée à des interfaces modernes pour le grand public. Toujours curieux, j'adore apprendre et relever de nouveaux défis pour offrir des solutions innovantes.
+                </p>
+            </div>
+            <a href="./assets/CV (12).pdf" download class="cv-button">
+                <i class="fas fa-file-download"></i>
+                <span>Télécharger CV</span>
+            </a>
+        </div>
+
+        <div id="career" class="career-path">
+            <h2>Mon Parcours</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2018-2023</h3>
+                        <h4>Développeur Full Stack</h4>
+                        <h5 class="company-name">Armée de Terre </h5>
+                        <p>Conception et développement d'applications afin de faciliter les flux de travaux manuels</p>
+                        <p>Tests et correction des bugs</p>
+                        <p>Travaux sur des projets au sein des régiments pour une plateforme de communication sécurisée avec l'équipe de cybersécurité</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2023-2024</h3>
+                        <h4>Développeur Frontend</h4>
+                        <h5 class="company-name">Window
+                        </h5>
+                        <p>Développement d'une application React Native pour aider les utilisateurs à trouver des articles grâce à l'intelligence artificielle</p>
+                        <p>Implémentation d'un chatbot basé sur GPT-4</p>
+                        <p>Design responsive avec Tailwind CSS</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2024-Présent</h3>
+                        <h4>Développeur Frontend</h4>
+                        <h5 class="company-name">KVSA</h5>
+                        <p>Développement d'une app web avec React et React Dom router, qui permet aux utilisateurs de trouver et de réserver
+                            des logements avec une interface claire et ergonomique.</p>
+                        <p>Gérer les erreurs et les cas limites (ex. : pages 404 )
+                        </p>
+                        <p>Implémentation des routes pour naviguer entre les différentes pages de manière dynamique.
+                        </p>
+                        <p>Optimisation pour desktop, tablette et mobile
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="education-path">
+            <h2>Formation</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2023</h3>
+                        <h4>Formation Développeur Web</h4>
+                        <h5 class="company-name">OpenClassrooms</h5>
+                        <p>Formation intensive en développement web</p>
+                        <p>Spécialisation en React et JavaScript</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2018-2019</h3>
+                        <h4>Formation Développeur informatique </h4>
+                        <h5 class="company-name">Ecole nationale des transmissions de Rennes</h5>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <h2>Mes Projets</h2>
+        <div class="projects-grid">
+            <!-- Projet 1 -->
+            <div class="project-card">
+                <a href="#demo-link-1" class="project-image-link" target="_blank">
+                    <div class="project-image">
+                        <img src="./assets/Capture d'écran 2025-01-07 121744.png" alt="Projet 1">
+                        <div class="project-overlay">
+                            <span>Voir la démo</span>
+                        </div>
+                    </div>
+                </a>
+                <div class="project-info">
+                    <h3>Nom du Projet 1</h3>
+                    <p class="project-description">Description courte du projet.</p>
+                </div>
+            </div>
+
+            <!-- Projet 2 -->
+            <div class="project-card">
+                <a href="#demo-link-2" class="project-image-link" target="_blank">
+                    <div class="project-image">
+                        <img src="./assets/th (3).jpg" alt="Projet 2">
+                        <div class="project-overlay">
+                            <span>Voir la démo</span>
+                        </div>
+                    </div>
+                </a>
+                <div class="project-info">
+                    <h3>Nom du Projet 2</h3>
+                    <p class="project-description">Description courte du projet.</p>
+                </div>
+            </div>
+
+            <!-- Projet 3 -->
+            <div class="project-card">
+                <a href="https://ryadhlam.github.io/Removal-IA/" class="project-image-link" target="_blank">
+                    <div class="project-image">
+                        <img src="./assets/Removal IA (1).jpg" alt="Projet 3">
+                        <div class="project-overlay">
+                            <span>Voir la démo</span>
+                        </div>
+                    </div>
+                </a>
+                <div class="project-info">
+                    <h3>Nom du Projet 3</h3>
+                    <p class="project-description">Description courte du projet.</p>
+                </div>
+            </div>
+
+            <!-- Projet 4 -->
+            <div class="project-card">
+                <a href="#demo-link-4" class="project-image-link" target="_blank">
+                    <div class="project-image">
+                        <img src="./assets/Coffee..jpg" alt="Projet 4">
+                        <div class="project-overlay">
+                            <span>Voir la démo</span>
+                        </div>
+                    </div>
+                </a>
+                <div class="project-info">
+                    <h3>Nom du Projet 4</h3>
+                    <p class="project-description">Description courte du projet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Me Contacter</h2>
+        <div class="social-links">
+            <a href="mailto:votre@email.com" class="social-link">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+            </a>
+            <a href="https://linkedin.com/in/ryadhlam/" target="_blank" class="social-link">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/RyadhLAM" target="_blank" class="social-link">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+            </a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html> 
