@@ -125,66 +125,70 @@
     <section id="projects" class="projects-section">
         <h2>Mes Projets</h2>
         <div class="projects-grid">
-            <!-- Projet 1 -->
+            <!-- Projet Coffee -->
             <div class="project-card">
-                <a href="#demo-link-1" class="project-image-link" target="_blank">
+                <div class="project-image-link" onclick="openVideoModal('/assets/coffee.mp4', 'Coffee Shop')">
                     <div class="project-image">
-                        <img src="./assets/Capture d'écran 2025-01-07 121744.png" alt="Projet 1">
+                        <img src="./assets/Coffee..jpg" alt="Coffee Shop">
                         <div class="project-overlay">
                             <span>Voir la démo</span>
+                            <i class="fas fa-play-circle"></i>
                         </div>
                     </div>
-                </a>
+                </div>
                 <div class="project-info">
-                    <h3>Nom du Projet 1</h3>
+                    <h3>Coffee Shop</h3>
                     <p class="project-description">Description courte du projet.</p>
                 </div>
             </div>
 
-            <!-- Projet 2 -->
+            <!-- Projet Removal IA -->
             <div class="project-card">
-                <a href="#demo-link-2" class="project-image-link" target="_blank">
+                <div class="project-image-link" onclick="openVideoModal('/assets/removal_IA.mp4', 'Removal IA')">
                     <div class="project-image">
-                        <img src="./assets/th (3).jpg" alt="Projet 2">
+                        <img src="./assets/Removal IA (1).jpg" alt="Removal IA">
                         <div class="project-overlay">
                             <span>Voir la démo</span>
+                            <i class="fas fa-play-circle"></i>
                         </div>
                     </div>
-                </a>
+                </div>
                 <div class="project-info">
-                    <h3>Nom du Projet 2</h3>
+                    <h3>Removal IA</h3>
                     <p class="project-description">Description courte du projet.</p>
                 </div>
             </div>
 
-            <!-- Projet 3 -->
+            <!-- Projet Window -->
             <div class="project-card">
-                <a href="https://ryadhlam.github.io/Removal-IA/" class="project-image-link" target="_blank">
+                <div class="project-image-link" onclick="openVideoModal('/assets/window.mp4', 'Window')">
                     <div class="project-image">
-                        <img src="./assets/Removal IA (1).jpg" alt="Projet 3">
+                        <img src="./assets/Capture d'écran 2025-01-07 121744.png" alt="Window">
                         <div class="project-overlay">
                             <span>Voir la démo</span>
+                            <i class="fas fa-play-circle"></i>
                         </div>
                     </div>
-                </a>
+                </div>
                 <div class="project-info">
-                    <h3>Nom du Projet 3</h3>
+                    <h3>Window</h3>
                     <p class="project-description">Description courte du projet.</p>
                 </div>
             </div>
 
-            <!-- Projet 4 -->
+            <!-- Projet KVSA -->
             <div class="project-card">
-                <a href="#demo-link-4" class="project-image-link" target="_blank">
+                <div class="project-image-link" onclick="openVideoModal('/assets/KVSA.mp4', 'KVSA')">
                     <div class="project-image">
-                        <img src="./assets/Coffee..jpg" alt="Projet 4">
+                        <img src="./assets/th (3).jpg" alt="KVSA">
                         <div class="project-overlay">
                             <span>Voir la démo</span>
+                            <i class="fas fa-play-circle"></i>
                         </div>
                     </div>
-                </a>
+                </div>
                 <div class="project-info">
-                    <h3>Nom du Projet 4</h3>
+                    <h3>KVSA</h3>
                     <p class="project-description">Description courte du projet.</p>
                 </div>
             </div>
@@ -229,6 +233,18 @@
             </a>
         </div>
     </section>
+
+    <!-- Ajouter le modal pour la vidéo -->
+    <div id="videoModal" class="video-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 id="modalTitle"></h3>
+            <video id="modalVideo" controls>
+                <source src="" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

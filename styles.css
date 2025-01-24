@@ -867,4 +867,63 @@ body {
         width: 200px;
         height: 200px;
     }
+}
+
+/* Styles pour le modal vidéo */
+.video-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1001;
+    overflow: auto;
+}
+
+.modal-content {
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#modalVideo {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#modalTitle {
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Modifier le style de l'overlay pour inclure l'icône de lecture */
+.project-overlay {
+    cursor: pointer;
+}
+
+.project-overlay i {
+    font-size: 2em;
+    margin-top: 10px;
+    color: white;
+}
+
+.project-image-link {
+    cursor: pointer;
 } 
