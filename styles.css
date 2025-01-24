@@ -1009,4 +1009,23 @@ body {
         max-height: 90vh;
         overflow-y: auto;
     }
+}
+
+/* Ajuster les couleurs des projets en mode sombre */
+:root[data-theme="dark"] .project-card {
+    background: #1d1d1f;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+:root[data-theme="dark"] .project-card h3 {
+    color: #ffffff;
+}
+
+:root[data-theme="dark"] .project-description {
+    color: #e0e0e0;
+}
+
+:root[data-theme="dark"] .project-card:hover {
+    background: #2d2d2f;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 } 
