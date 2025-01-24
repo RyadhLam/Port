@@ -926,4 +926,87 @@ body {
 
 .project-image-link {
     cursor: pointer;
+}
+
+/* Ajustements responsive */
+@media (max-width: 768px) {
+    .navbar {
+        width: 90%;
+        padding: 8px 15px;
+        bottom: 20px;
+        top: auto;
+    }
+
+    .nav-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+    }
+
+    .nav-item {
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 60px;
+    }
+
+    .nav-item i {
+        font-size: 1.2em;
+        margin-bottom: 4px;
+    }
+
+    .nav-item span {
+        display: block;
+        font-size: 0.7em;
+        text-align: center;
+    }
+
+    .home-section {
+        padding-bottom: 100px;
+    }
+
+    .contact-section {
+        padding-bottom: 120px;
+    }
+}
+
+/* Ajustements pour les très petits écrans */
+@media (max-width: 480px) {
+    .navbar {
+        width: 95%;
+        padding: 8px 10px;
+    }
+
+    .nav-item {
+        min-width: 50px;
+        padding: 6px;
+    }
+
+    .nav-item i {
+        font-size: 1.1em;
+    }
+
+    .nav-item span {
+        font-size: 0.65em;
+    }
+}
+
+/* Ajustements pour l'orientation paysage sur mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .home-section {
+        padding-top: 80px;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .modal-content {
+        max-height: 90vh;
+        overflow-y: auto;
+    }
 } 
