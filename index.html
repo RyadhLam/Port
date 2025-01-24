@@ -127,7 +127,7 @@
         <div class="projects-grid">
             <!-- Projet Coffee -->
             <div class="project-card">
-                <div class="project-image-link" onclick="openVideoModal('/assets/coffee.mp4', 'Coffee Shop')">
+                <div class="project-image-link" onclick="openVideoModal('https://youtu.be/6l3QO0Ss3P4', 'Coffee Shop')">
                     <div class="project-image">
                         <img src="./assets/Coffee..jpg" alt="Coffee Shop">
                         <div class="project-overlay">
@@ -144,7 +144,7 @@
 
             <!-- Projet Removal IA -->
             <div class="project-card">
-                <div class="project-image-link" onclick="openVideoModal('/assets/removal_IA.mp4', 'Removal IA')">
+                <div class="project-image-link" onclick="openVideoModal('https://youtu.be/7EMTVNUqJWo', 'Removal IA')">
                     <div class="project-image">
                         <img src="./assets/Removal IA (1).jpg" alt="Removal IA">
                         <div class="project-overlay">
@@ -161,7 +161,7 @@
 
             <!-- Projet Window -->
             <div class="project-card">
-                <div class="project-image-link" onclick="openVideoModal('/assets/window.mp4', 'Window')">
+                <div class="project-image-link" onclick="openVideoModal('https://youtu.be/z38z5PcbS64', 'Window')">
                     <div class="project-image">
                         <img src="./assets/Capture d'écran 2025-01-07 121744.png" alt="Window">
                         <div class="project-overlay">
@@ -178,7 +178,7 @@
 
             <!-- Projet KVSA -->
             <div class="project-card">
-                <div class="project-image-link" onclick="openVideoModal('/assets/KVSA.mp4', 'KVSA')">
+                <div class="project-image-link" onclick="openVideoModal('https://youtu.be/w6T97qcRA-k', 'KVSA')">
                     <div class="project-image">
                         <img src="./assets/th (3).jpg" alt="KVSA">
                         <div class="project-overlay">
@@ -234,15 +234,18 @@
         </div>
     </section>
 
-    <!-- Ajouter le modal pour la vidéo -->
+    <!-- Modifier le modal vidéo -->
     <div id="videoModal" class="video-modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
             <h3 id="modalTitle"></h3>
-            <video id="modalVideo" controls>
-                <source src="" type="video/mp4">
-                Votre navigateur ne supporte pas la lecture de vidéos.
-            </video>
+            <div class="video-container">
+                <iframe id="modalVideo" 
+                        frameborder="0" 
+                        allowfullscreen
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                </iframe>
+            </div>
         </div>
     </div>
 
